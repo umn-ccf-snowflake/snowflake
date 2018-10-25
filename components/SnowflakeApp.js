@@ -12,6 +12,8 @@ import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
 
+import * as tracks from '../components/tracks'
+
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
   name: string,
@@ -27,8 +29,8 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
-  if (hashValues[16]) result.name = decodeURI(hashValues[16])
-  if (hashValues[17]) result.title = decodeURI(hashValues[17])
+  if (hashValues[tracks.track_keys.length]) result.name = decodeURI(hashValues[tracks.track_keys.length])
+  if (hashValues[tracks.track_keys.length + 1]) result.title = decodeURI(hashValues[tracks.track_keys.length + 1])
   return result
 }
 
@@ -45,55 +47,31 @@ const coerceMilestone = (value: number): Milestone => {
   }
 }
 
+const milestoneByTrack_zeroes = {}
+tracks.track_keys.forEach(function(key, value) {
+  milestoneByTrack_zeroes[key] = 0;
+});
+
 const emptyState = (): SnowflakeAppState => {
   return {
     name: '',
     title: '',
-    milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
-      'PROJECT_MANAGEMENT': 0,
-      'COMMUNICATION': 0,
-      'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
-      'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
-    },
-    focusedTrackId: 'MOBILE'
+    milestoneByTrack: milestoneByTrack_zeroes,
+    focusedTrackId: tracks.track_keys[0]
   }
 }
+
+const milestoneByTrack_random = {}
+tracks.track_keys.forEach(function(key, value) {
+  milestoneByTrack_random[key] = milestones[Math.floor(Math.random() * milestones.length)];
+});
 
 const defaultState = (): SnowflakeAppState => {
   return {
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
-    milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
-    },
-    focusedTrackId: 'MOBILE'
+    milestoneByTrack: milestoneByTrack_random,
+    focusedTrackId: tracks.track_keys[0]
   }
 }
 

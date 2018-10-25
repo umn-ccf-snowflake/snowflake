@@ -3,7 +3,7 @@ import * as d3 from 'd3'
 import * as titles from './components/titles'
 import * as tracks from './components/tracks'
 
-tracks.tracks.forEach(function(t) {type TrackId = t})
+export type TrackId = $Keys<typeof tracks.tracks>;
 
 // export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
 //   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
@@ -11,24 +11,8 @@ tracks.tracks.forEach(function(t) {type TrackId = t})
 //   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
 export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
-export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
-  'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
-  'INITIATIVE': Milestone,
-  'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
-  'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
-  'RECRUITING': Milestone,
-  'COMMUNITY': Milestone
-}
+export type MilestoneMap = $ObjMap<tracks.track_keys, typeof Milestone>;
+
 export const milestones = [0, 1, 2, 3, 4, 5]
 
 export const milestoneToPoints = (milestone: Milestone): number => {
@@ -63,7 +47,7 @@ export const pointsToLevels = {
 
 export const maxLevel = 135
 
-export const trackIds: TrackId[] = Object.keys(tracks.tracks)
+export const trackIds: tracks.my_new_type[] = Object.keys(tracks.tracks)
 
 export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
   set.add(tracks.tracks[trackId].category)
