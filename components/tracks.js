@@ -26,7 +26,19 @@ export const tracks: Tracks = {
         "Add follow button for publications on Android",
         "Fetched and displayed a new stream, using existing stream item styles",
       ],
-    }, {
+    },{
+      "summary": "NEW!  Works effectively within established iOS or Android architectures, following current best practices",
+      "signals": [
+        "Delivers features requiring simple local modifications",
+        "Adds simple actions that call server endpoints",
+        "Reuses existing components appropriately",
+      ],
+      "examples": [
+        "Added existing button to a different iOS surface",
+        "Add follow button for publications on Android",
+        "Fetched and displayed a new stream, using existing stream item styles",
+      ],
+    },  {
       "summary": "Develops new instances of existing architecture, or minor improvements to existing architecture",
       "signals": [
         "Defines new useful and appropriate proto-generated objects",

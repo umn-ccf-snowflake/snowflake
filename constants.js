@@ -9,11 +9,15 @@ export type TrackId = $Keys<typeof tracks.tracks>;
 //   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
 //   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
 //   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+//
+const milestone_point_array = [0, 1, 3, 6, 12];
+
+export type Milestone = $Keys<milestone_point_array>
+//export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
 export type MilestoneMap = $ObjMap<tracks.track_keys, typeof Milestone>;
 
-export const milestones = [0, 1, 2, 3, 4, 5]
+export const milestones = Object.keys(milestone_point_array)
 
 export const milestoneToPoints = (milestone: Milestone): number => {
   switch (milestone) {
