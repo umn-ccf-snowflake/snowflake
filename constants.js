@@ -17,18 +17,10 @@ export type Milestone = $Keys<milestone_point_array>
 
 export type MilestoneMap = $ObjMap<tracks.track_keys, typeof Milestone>;
 
-export const milestones = Object.keys(milestone_point_array)
+export const milestones = Object.keys(milestone_point_array).map((value) => Number.parseInt(value,10))
 
 export const milestoneToPoints = (milestone: Milestone): number => {
-  switch (milestone) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 3
-    case 3: return 6
-    case 4: return 12
-    case 5: return 20
-    default: return 0
-  }
+  return milestone_point_array[milestone]
 }
 
 export const pointsToLevels = {
