@@ -12,7 +12,7 @@ import type { Milestone, MilestoneMap, TrackId } from '../constants'
 import React from 'react'
 import TitleSelector from '../components/TitleSelector'
 
-import * as tracks from '../components/tracks'
+import * as config from '../components/Config'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -29,8 +29,8 @@ const hashToState = (hash: String): ?SnowflakeAppState => {
   trackIds.forEach((trackId, i) => {
     result.milestoneByTrack[trackId] = coerceMilestone(Number(hashValues[i]))
   })
-  if (hashValues[tracks.track_keys.length]) result.name = decodeURI(hashValues[tracks.track_keys.length])
-  if (hashValues[tracks.track_keys.length + 1]) result.title = decodeURI(hashValues[tracks.track_keys.length + 1])
+  if (hashValues[config.track_keys.length]) result.name = decodeURI(hashValues[config.track_keys.length])
+  if (hashValues[config.track_keys.length + 1]) result.title = decodeURI(hashValues[config.track_keys.length + 1])
   return result
 }
 
@@ -48,7 +48,7 @@ const coerceMilestone = (value: number): Milestone => {
 }
 
 const milestoneByTrack_zeroes = {}
-tracks.track_keys.forEach(function(key, value) {
+config.track_keys.forEach(function(key, value) {
   milestoneByTrack_zeroes[key] = 0;
 });
 
@@ -57,12 +57,12 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: milestoneByTrack_zeroes,
-    focusedTrackId: tracks.track_keys[0]
+    focusedTrackId: config.track_keys[0]
   }
 }
 
 const milestoneByTrack_random = {}
-tracks.track_keys.forEach(function(key, value) {
+config.track_keys.forEach(function(key, value) {
   milestoneByTrack_random[key] = milestones[Math.floor(Math.random() * milestones.length)];
 });
 
@@ -71,7 +71,7 @@ const defaultState = (): SnowflakeAppState => {
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     milestoneByTrack: milestoneByTrack_random,
-    focusedTrackId: tracks.track_keys[0]
+    focusedTrackId: config.track_keys[0]
   }
 }
 

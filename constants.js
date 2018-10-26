@@ -1,26 +1,24 @@
 // @flow
 import * as d3 from 'd3'
-import * as titles from './components/titles'
-import * as tracks from './components/tracks'
+import * as config from './components/Config'
 
-export type TrackId = $Keys<typeof tracks.tracks>;
+export type TrackId = $Keys<typeof config.tracks>;
 
 // export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
 //   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
 //   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
 //   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
 //
-const milestone_point_array = [0, 1, 3, 6, 12];
 
-export type Milestone = $Keys<milestone_point_array>
+export type Milestone = $Keys<config.milestone_level_points>
 //export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
 
-export type MilestoneMap = $ObjMap<tracks.track_keys, typeof Milestone>;
+export type MilestoneMap = $ObjMap<config.track_keys, typeof Milestone>;
 
-export const milestones = Object.keys(milestone_point_array).map((value) => Number.parseInt(value,10))
+export const milestones = Object.keys(config.milestone_level_points).map((value) => Number.parseInt(value,10))
 
 export const milestoneToPoints = (milestone: Milestone): number => {
-  return milestone_point_array[milestone]
+  return config.milestone_level_points[milestone]
 }
 
 export const pointsToLevels = {
@@ -43,10 +41,10 @@ export const pointsToLevels = {
 
 export const maxLevel = 135
 
-export const trackIds: tracks.my_new_type[] = Object.keys(tracks.tracks)
+export const trackIds: config.my_new_type[] = Object.keys(config.tracks)
 
 export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
-  set.add(tracks.tracks[trackId].category)
+  set.add(config.tracks[trackId].category)
   return set
 }, new Set())
 
@@ -54,7 +52,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   let pointsByCategory = new Map()
   trackIds.forEach((trackId) => {
     const milestone = milestoneMap[trackId]
-    const categoryId = tracks.tracks[trackId].category
+    const categoryId = config.tracks[trackId].category
     let currentPoints = pointsByCategory.get(categoryId) || 0
     pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
   })
@@ -76,7 +74,7 @@ export const categoryColorScale = d3.scaleOrdinal()
 export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
   const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
 
-  return titles.titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
+  return config.titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
                              && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
     .map(title => title.label)
 }
