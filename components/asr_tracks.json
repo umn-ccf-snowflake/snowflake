@@ -1,0 +1,488 @@
+{
+  "Server":{
+    "displayName": "Server",
+    "category": "A",
+    "description": "Development of server-side code. Examples: Ruby/Rails applications, WFG processes, Drupal migrations",
+    "milestones": [{
+      "summary": "Works within current applications following existing patterns",
+      "signals": [
+        "Works on stories that can be delivered in a short timeframe",
+        "Makes minor changes to existing applications",
+        "Pair programs to fix well-documented bugs and deliver well-documented features"
+      ],
+      "examples": [
+        "Updates a Rails view to show existing data",
+        "Removes data from a Drupal migration",
+        "Edits a question in a WorkflowGen form"
+      ]
+    },{
+      "summary": "Extends current applications with new features, creates new examples of existing applications",
+      "signals": [
+        "Applying lessons leaned from previous stories",
+        "Refactoring code to new patterns",
+        "Starts a new application from a template"
+      ],
+      "examples": [
+        "Migrates a Rails application to a new major release",
+        "Creates a new Drupal migration based on an existing migration",
+        "Adds new questions to a WorkflowGen form"
+      ]
+    },{
+      "summary": "Implements unique features or applications",
+      "signals": [
+        "Debugging and documenting novel problems",
+        "Designing applications with new feature sets",
+        "Integrates new applications with existing ones"
+      ],
+      "examples": [
+        "Creating a Drupal migration that uses a new data source",
+        "Designing a new WorkflowGen process that uses new parts of the tool",
+        "Debugging and patching a unique problem occurring in a Rails gem"
+      ]
+    },{
+      "summary": "Leads the design and implementation of new applications",
+      "signals": [
+        "Prioritization of a list of stories needed to deliver a new application",
+        "Sees steps to get from current to desired code",
+        "Delivers code that is honed by past experience and easily changed in the future"
+      ],
+      "examples": [
+        "Serving as Lead Developer for a new Rails application",
+        "Leading multi-step refactoring necessary to implement a new feature",
+        "Designing an application that can be changed to work with as-yet undeveloped code"
+      ]
+    }]
+  }, 
+  "Client":{
+    "displayName": "Client",
+    "category": "A",
+    "description": "Development of client-side code. Examples: JavaScript applications, CSS, Accessibility, UI, UX",
+    "milestones": [{
+      "summary": "Works within current client-side code following existing patterns",
+      "signals": [
+        "Works on stories that can be delivered in a short timeframe",
+        "Makes minor changes to existing applications",
+        "Pair programs to fix well-documented bugs and deliver well-documented features"
+      ],
+      "examples": [
+        "Updates CSS classes used by elements",
+        "Edits Rails views to improve accessibility",
+        "Fixes misuse of Bootstrap competent names"
+      ]
+    },{
+      "summary": "Extends current client-side code with new features, creates new examples of existing applications",
+      "signals": [
+        "Applying lessons learned from previous stories",
+        "Refactoring code to new patterns",
+        "Starts a new application from a template"
+      ],
+      "examples": [
+        "Uses automated accessibility checks to ensure quality of work",
+        "Revising CSS code to work with latest Bootstrap release",
+        "Creating a new JS framework app based on an existing application"
+      ]
+    },{
+      "summary": "Implements unique client-side solutions",
+      "signals": [
+        "Debugging and documenting novel problems",
+        "Designing applications with new feature sets",
+        "Integrates new applications with existing ones"
+      ],
+      "examples": [
+        "Debug, document and fix a UX error that is browser specific",
+        "Evaluating new JS frameworks for use on upcoming projects",
+        "Build cross-application CSS/Asset libraries to give multiple applications similar tooling"
+      ]
+    },{
+      "summary": "Leads the design and implementation of client side solutions",
+      "signals": [
+        "Prioritization of a list of stories needed to deliver a new application",
+        "Sees steps to get from current to desired code",
+        "Delivers code that is honed by past experience and easily changed in the future"
+      ],
+      "examples": [
+        "Lead Developer for a new JS application",
+        "Leading a refactoring of a complex Rails' application view layer to meet accessibility guidelines",
+        "Writing a UX toolkit that the team can use in a wide variety of applications"
+      ]
+    }]
+  }, 
+  "Infrastructure":{
+    "displayName": "Infrastructure",
+    "category": "A",
+    "description": "Development of infrastructure and operational code. Examples: Ansible, Capistrano, Splunk",
+    "milestones": [{
+      "summary": "Works within current operational code following existing patterns",
+      "signals": [
+        "Works on stories that can be delivered in a short timeframe",
+        "Makes simple configuration changes to services",
+        "Use well-documented automation tools and verify that they work"
+      ],
+      "examples": [
+        "Updates existing Ansible playbooks and runs them",
+        "Edits Splunk reports",
+        "Runs and verifies application deployments and database migrations"
+      ]
+    },{
+      "summary": "Applying lessons leaned from previous stories",
+      "signals": [
+        "Applying lessons learned from previous stories",
+        "Refactoring code to new patterns",
+        "Start operational reporting from a template"
+      ],
+      "examples": [
+        "Creates new playbooks based on existing playbooks",
+        "Updates an application to use a new major version of Capistrano",
+        "Delivers Splunk dashboards and notifications"
+      ]
+    },{
+      "summary": "Implements unique operational and automation tools",
+      "signals": [
+        "Implement and automate novel operational technologies",
+        "Designing new operational features",
+        "Integrate existing work to create new tools"
+      ],
+      "examples": [
+        "Writes playbooks from scratch for a new technology",
+        "Implements a new metrics/logging layer for an application",
+        "Aggregate application events into explorable Splunk dashboards and visualizations"
+      ]
+    },{
+      "summary": "Leads the design and implementation of large-scale, highly-automated operational code",
+      "signals": [
+        "Prioritization and delegation of stories needed to deliver a new application",
+        "Sees steps to get from current to desired code",
+        "Delivers code that is honed by past experience and easily changed in the future"
+      ],
+      "examples": [
+        "Co-ordinate multiple development teams to deliver consistent Application events that can drive automation",
+        "Leads effort to consolidate existing automation scripts into a single ChatOps application",
+        "Develops CI/CD tooling that can be used across multiple applications"
+      ]
+    }]
+  }, 
+  "Analysis":{
+    "displayName": "Analysis",
+    "category": "B",
+    "description": "Working with stakeholders to gather requirements, decomposing features in to deliverable stories",
+    "milestones": [{
+      "summary": "Effectively analyzes stories",
+      "signals": [
+        "Discusses tightly-scoped features with stakeholders",
+        "Helps team judge upcoming work",
+        "Writes effective technical specs outlining approach"
+      ],
+      "examples": [
+        "Reviewing a story and any questions during a sprint planning meeting",
+        "Participating in a sprint planning meeting, doing story estimation",
+        "Outlining implementation steps on a whiteboard, following that plan until the feature is done"
+      ]
+    },{
+      "summary": "Effectively iterates and balances work",
+      "signals": [
+        "Uses iteration to quickly deliver and refine features with unclear requirements",
+        "Collaborates with stakeholders to explore their needs",
+        "Balances work between stakeholder needs and team constraints"
+      ],
+      "examples": [
+        "Demoing an unfinished story to get feedback",
+        "Scheduling a quick design meeting with stakeholders to flesh out unclear/unexpected requirements",
+        "Delivering a story meeting the current tests, without delivering extra code to satisfy possible future stories."
+      ]
+    },{
+      "summary": "Effectively delivers projects through a small team",
+      "signals": [
+        "Organizes project to deliver highest business value early",
+        "Leads technical analysis to compare possible solutions",
+        "Manages upgrade to external systems and the systems that use them."
+      ],
+      "examples": [
+        "Running sprint planning meetings with stakeholders during the course of a project",
+        "Creating spike branches and rubrics for judging the success of alternative approaches",
+        "Leading the analysis and testing of our apps as part of a PeopleSoft upgrade"
+      ]
+    },{
+      "summary": "Effectively delivers projects through a large team, or with a significant amount of stakeholders or complexity",
+      "signals": [
+        "Leads analysis and story breakdown for a complex application",
+        "Blends new, existing and 3rd party work to deliver features",
+        "Uses high-level requirements to scope and outline a project"
+      ],
+      "examples": [
+        "Reviewing requirement documents and writing a technical plan for the development steps necessary to complete",
+        "Researching, testing and implementing Kafka",
+        "Estimating and prioritizing work to deliver a new Rails application"
+      ]
+    }]
+  }, 
+  "Communication":{
+    "displayName": "Communication",
+    "category": "B",
+    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
+    "milestones": [{
+      "summary": "Communicates effectively to close stakeholders when called upon, and incorporates constructive feedback",
+      "signals": [
+        "Communicates project status clearly and effectively",
+        "Collaborates with others with empathy",
+        "Asks for help at the appropriate juncture"
+      ],
+      "examples": [
+        "Writes a commit message that includes the context and reasoning for a change",
+        "Pair programs as both driver and navigator",
+        "Asks clarifying questions in a Pivotal Tracker story"
+      ]
+    },{
+      "summary": "Communicates with the wider team appropriately, focusing on timeliness and good quality conversations",
+      "signals": [
+        "Practices active listening and suspension of attention",
+        "Ensures stakeholders are aware of current blockers",
+        "Chooses the appropriate tools for accurate and timely communication"
+      ],
+      "examples": [
+        "Using one-on-ones to hear feedback on weak areas",
+        "Discuss roadblock in project stand up and collaborate with the stakeholder to resolve it.",
+        "Deliver a presentation (or write a blog) about a recent project"
+      ]
+    },{
+      "summary": "Proactively shares information, actively solicits feedback, and facilitates communication for multiple stakeholders",
+      "signals": [
+        "Resolves communication difficulties between others",
+        "Anticipates and shares schedule deviations in plenty of time",
+        "Manages project stakeholder expectations effectively"
+      ],
+      "examples": [
+        "Organizing Communities of Practice to reduce silos",
+        "Writing a technical roadmap document outlining the application's context and trade-offs",
+        "Leading sprint planning and retrospective meetings for a project"
+      ]
+    },{
+      "summary": "Communicates complex ideas skillfully and with nuance, and establishes alignment within the wider organization",
+      "signals": [
+        "Communicates project risk and trade-offs skillfully and with nuance",
+        "Provides a framework for team inclusivity and culture",
+        "Negotiates resourcing compromises with other teams"
+      ],
+      "examples": [
+        "Writing a long-term work plan that balances Director requests and other project needs",
+        "Leading project to formalize Ground Rules for meetings",
+        "Meeting with OIT team to outline our hosting needs and developing a plan for collaboration"
+      ]
+    }]
+  }, 
+  "Best":{
+    "displayName": "Best Practices",
+    "category": "B",
+    "description": "Embodies and promotes practices to ensure excellent quality products and services",
+    "milestones": [{
+      "summary": "Follows established best practices effectively",
+      "signals": [
+        "Uses TDD/BDD workflow for new features and bug fixes.",
+        "Follows best practice guides",
+        "Writes clear git commits and pull request descriptions"
+      ],
+      "examples": [
+        "Writing a failing test for a new feature before implementing the new feature",
+        "Using the Rails Best Practice guide to create a new Rails application",
+        "Following the Git message template in our Git Best Practices guide"
+      ]
+    },{
+      "summary": "Expands use of practices to existing systems, suggests revisions to current practices",
+      "signals": [
+        "Adding best practices to code that predates the practices",
+        "Helping the whole team follow our best practices",
+        "Identifying practices that are no longer working or necessary"
+      ],
+      "examples": [
+        "Adding a code linter to a legacy application",
+        "Thorough and empathetic code reviews, pointing out places where the code does not follow our practices",
+        "Discussing a unnecessary practice in a team retrospective"
+      ]
+    },{
+      "summary": "Teaching best practices, researching and experimenting with new practices",
+      "signals": [
+        "Documenting best practices and their purposes",
+        "Researches and develops new practices",
+        "Automating best practices"
+      ],
+      "examples": [
+        "Writing a new best practice guide for Rails",
+        "Release a CI tool to address a pain point discussed in team retrospectives",
+        "Developing a script that runs pa11y accessibility checks as part of our test suite"
+      ]
+    },{
+      "summary": "Identifying areas in need of best practices, developing and documenting practices",
+      "signals": [
+        "Leads project to update code that does not follow best practices",
+        "Introduces best practices that improve the entire team",
+        "Manages the introduction of multi-step processes"
+      ],
+      "examples": [
+        "Serving as Tech Lead for TFMS refactoring projects",
+        "Create weekly retrospectives and processes for continual improvement",
+        "Developing a roadmap to introduce an automated CI/CD pipeline"
+      ]
+    }]
+  }, 
+  "Community":{
+    "displayName": "Community",
+    "category": "C",
+    "description": "Builds and supports community. Champions the team, department and University values",
+    "milestones": [{
+      "summary": "Participates in UMN IT and ASR Community events",
+      "signals": [
+        "Participates in team activities",
+        "Treats colleagues and clients with respect",
+        "Joins and participates in relevant groups"
+      ],
+      "examples": [
+        "Attending Code-People meetings",
+        "Inviting team to a lunch where everyone's dietary needs are met",
+        "Member of TechPeople Slack, offering help when available"
+      ]
+    },{
+      "summary": "Expands the scope of UMN IT and other Community events, helping to build a more inclusive culture",
+      "signals": [
+        "Represents ASR at events outside of the UMN IT community",
+        "Expands membership of UMN IT community",
+        "Evangelizes involvement in UMN IT community"
+      ],
+      "examples": [
+        "Completing the Equity and Diversity certificate",
+        "Find teams not attending Code People and invite them to attend; suggest talks that will attract a wider audience",
+        "Telling other UMN employees about benefits of hearing a talk or attending a meeting"
+      ]
+    },{
+      "summary": "Organizes of UMN IT and other Community events, shaping a welcoming and inclusive culture",
+      "signals": [
+        "Expanding options for Community involvement",
+        "Introduces new ideas in to the UMN IT Community",
+        "Advocates for changes to UMN Community"
+      ],
+      "examples": [
+        "Starting a new Community of Practice, or joining the committee of an existing one",
+        "Inviting an external speaker or trainer to campus",
+        "Scheduled windows-specific talks so that Windows devs would feel welcome at Code People"
+      ]
+    },{
+      "summary": "Strategy for and leadership of UMN IT Community",
+      "signals": [
+        "Finding communities not represented in UMN IT Community, making space for them",
+        "Mentoring new community leaders from under-represented communities",
+        "Advocates for Community involvement at the Director/Chief level"
+      ],
+      "examples": [
+        "Guiding the creation of a new Community Of Practice for Junior Developers",
+        "Leaving a Committee position so that others can take your place and grow into a leadership role",
+        "Present to IT Leadership about the value of Tech-People"
+      ]
+    }]
+  }, 
+  "Mentorship":{
+    "displayName": "Mentorship",
+    "category": "C",
+    "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
+    "milestones": [{
+      "summary": "Is mentored by peers, supports new hires, and conveys institutional knowledge as appropriate.",
+      "signals": [
+        "Receives mentorship",
+        "Shares daily learnings with the team",
+        "Perform ad-hoc mentorship"
+      ],
+      "examples": [
+        "Learn Ruby with the help of a Mentor",
+        "Post new command-line skills in Slack",
+        "Help a teammate with a blocker they list in their daily standup"
+      ]
+    },{
+      "summary": "Mentors people proactively, and guides people to realizations rather than providing the answer",
+      "signals": [
+        "Takes time to explain concepts and best practices",
+        "Asks questions to illuminate concepts, rather than stating them",
+        "Remove bottlenecks within the team"
+      ],
+      "examples": [
+        "Introduce the WorkflowGen development process to a new team member.",
+        "Mentor a new employee through an Exercism track",
+        "Document and share knowledge about a gem you wrote solo"
+      ]
+    },{
+      "summary": "Teaches small groups and contributes to mentorship outside of the team",
+      "signals": [
+        "Allows others to lead efforts when it will help their development",
+        "Mentors developers outside of the team",
+        "Establishes mentorship plans within the team"
+      ],
+      "examples": [
+        "Ask another team member to deliver a story that you already know how to deliver",
+        "Participate in WIT's mentorship program as a mentor",
+        "Create and run a Code Smell study group"
+      ]
+    },{
+      "summary": "Encourages people to mentor each other, and creates ways for them to do so",
+      "signals": [
+        "Builds a framework for mentorship",
+        "Mentors those new to mentorship",
+        "Mentors groups"
+      ],
+      "examples": [
+        "Create a mentorship plan for a new employee",
+        "Assign mentorship role to new mentors, meet with them to help them improve",
+        "Organize and run a campus-wide coderetreat"
+      ]
+    }]
+  }, 
+  "Professional":{
+    "displayName": "Professional Development",
+    "category": "C",
+    "description": "Identifies skills that you want to improve, plans and implements how to improve them",
+    "milestones": [{
+      "summary": "Addressing immediate development needs",
+      "signals": [
+        "Plan to learn skill used on current project",
+        "Identify skills to learn based on observation",
+        "Completes and reviews short-term professional development"
+      ],
+      "examples": [
+        "Read Sidekiq documentation after seeing it used in SDP",
+        "Incorporate a vim technique you saw your pair use",
+        "Put a webinar on your IDP, complete the webinar and report back what you learned"
+      ]
+    },{
+      "summary": "Uses recent experience to create plans to develop over the short to medium-term",
+      "signals": [
+        "Review problems faced on recent work, develop plan to address",
+        "Short-term planning of skills to collaboratively learn ",
+        "Complete and review medium-term professional development"
+      ],
+      "examples": [
+        "After having trouble with Rspec mocking, set aside time to read the Rspec book and review mocking strategies",
+        "Decide with a pair to learn about the Stimulus js framework before delivering a story that will use it",
+        "Create an IDP entry for learning about Agile Story Writing that incorporates books, webinars, etc. Complete the work and discuss with the team."
+      ]
+    },{
+      "summary": "Uses knowledge of past problems and future work to guide long-term development for self and for a small team",
+      "signals": [
+        "Incorporate past and future work to plan development",
+        "Mapping out skills needed for a project team",
+        "Complete and review long-term professional development"
+      ],
+      "examples": [
+        "Based on past experience with WorkflowGen and knowledge of a upcoming WorkflowGen project, set aside time to experiment with new features of the platform",
+        "At the start of a Rails project map out technology and techniques that the team wants to use, determine a training plan so that the team is ready",
+        "Complete the Equity and Diversity certification and share your experience with the team."
+      ]
+    }, {
+      "summary": "Prepares for unknown challenges and maps out long-term development for multiple people",
+      "signals": [
+        "Development plans to address unknown future possibilities",
+        "Creating a long-term skill roadmap for multiple people",
+        "Complete and review multi-person, long-term professional development"
+      ],
+      "examples": [
+        "Set aside time to research Kafka as  a possible solution to data pipeline problems",
+        "Build a map of team skills, work with team members to fill gaps",
+        "Establish a goal of cross-training team on Drupal development, organize training and then assign work to reinforce the training"
+      ]
+    }]
+  }
+}

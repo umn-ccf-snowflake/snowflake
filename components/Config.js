@@ -22,7 +22,7 @@ type Track = {
   }[]
 }
 
-export const tracks: Tracks = require('./tracks.json')
+export const tracks: Tracks = require('./asr_tracks.json')
 
 export const track_keys = Object.keys(tracks)
 
