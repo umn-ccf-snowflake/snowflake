@@ -1,15 +1,18 @@
 export const milestone_level_points = [0, 1, 3, 6, 12];
 
 export const titles = [
-  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
-  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
+  {label: 'Dev 1', minPoints: 0, maxPoints: 26},
+  {label: 'Dev 2', minPoints: 27, maxPoints: 53},
+  {label: 'Dev 3', minPoints: 54, maxPoints: 89},
+  {label: 'Dev 4', minPoints: 90}
 ]
+
+export const pointsToLevels = {
+  '0': '1',
+  '27': '2',
+  '33': '3',
+  '90': '4'
+}
 
 type Track = {
   displayName: string,
