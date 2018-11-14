@@ -14,6 +14,8 @@ export const pointsToLevels = {
   '90': '4'
 }
 
+export const maxLevel = 108
+
 type Track = {
   displayName: string,
   category: string, // TK categoryId type?

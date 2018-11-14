@@ -23,7 +23,7 @@ class PointSummaries extends React.Component<Props> {
     let pointsToNextLevel = 1
     while (!(nextLevel = config.pointsToLevels[totalPoints + pointsToNextLevel])) {
       pointsToNextLevel++
-      if (pointsToNextLevel > 135) {
+      if (pointsToNextLevel > config.maxLevel) {
         pointsToNextLevel = 'N/A'
         break
       }
