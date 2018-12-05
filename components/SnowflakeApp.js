@@ -68,7 +68,7 @@ config.track_keys.forEach(function(key, value) {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
+    name: 'Goldy Gopher',
     title: 'Staff Engineer',
     milestoneByTrack: milestoneByTrack_random,
     focusedTrackId: config.track_keys[0]
